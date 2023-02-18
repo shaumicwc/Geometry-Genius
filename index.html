@@ -31,13 +31,10 @@
             <div class="grid md:grid-cols-3 grid-cols-1 gap-4 mx-auto">
                 <!-- --------card 1 -------- -->
                 <div class=" border-gray-200 border-4 rounded-md p-5 text-center " id="card-id">
-                   
-                    
-                        <img src="./images/triangle.png" alt="" class=" ">
-                    
-                   
-                    <p class="text-2xl text-center font-bold my-2" id="triangle-title" >Triangle</p>
+                    <img src="./images/triangle.png" alt="" class=" ">
+                 <p class="text-2xl text-center font-bold my-2" id="triangle-title" >Triangle</p>
                     <p>Area (A) = 0.5 x b x h</p>
+                    
                     <p class="my-2">
                         <input type="text" placeholder="b" class="px-2 bg-gray-200 w-3/12 rounded-md" id="triangle-b">
                         cm <input type="text" placeholder="c" class="px-3 bg-gray-200 rounded-md w-3/12"
@@ -51,10 +48,11 @@
                     <img src="./images/rectangle.png" alt="" class="mt-8">
                     <p class="text-2xl text-center font-bold" id="rectangle-title">Rectangle</p>
                     <p>Area (A) = w x l</p>
+                    
                     <p class="my-2"><input type="text" placeholder="w" class="px-2 bg-gray-200 w-3/12 rounded-md"
                             id="rectangle-w"> cm <input type="text" placeholder="l"
                             class="px-3 bg-gray-200 rounded-md w-3/12" id="rectangle-l"> cm</p>
-                    <button class="py-2 mt-3 px-10 my-3 bg-cyan-600 text-white rounded-md"
+                    <button class="py-2 mt-10 px-10 my-3 bg-cyan-600 text-white rounded-md"
                         id="rectangle-calculate-btn">Calculate</button>
                 </div>
                 <!-- ---------------card 3----- -->
@@ -62,6 +60,7 @@
                     <img src="./images/parallelogram.png" alt="" class="mt-8">
                     <p class="text-2xl text-center font-bold" id="perallelogram-title">Perallelogram</p>
                     <p>Area (A) = b x h</p>
+                    <p>b=10cm, h=12cm</p>
                     <p class="my-2"><input type="text" placeholder="b" class="px-2 bg-gray-200 w-3/12 rounded-md"
                             id="perallelogram-b"> cm <input type="text" placeholder="h"
                             class="px-3 bg-gray-200 rounded-md w-3/12" id="perallelogram-h"> cm</p>
@@ -73,6 +72,7 @@
                     <img src="./images/rhombus.png" alt="" class="mt-5">
                     <p class="text-2xl text-center font-bold" id="rhombus-title">Rhombus</p>
                     <p>Area (A) = 0.5 x d<sub>1</sub> x d <sub>1</sub> </p>
+                    <p class="text-xl text-center">d<sub>1</sub> = 16cm, d<sub>2</sub> = 8cm</p>
                     <p class="my-2"><input type="text" placeholder="" class="px-2 bg-gray-200 w-3/12 rounded-md"
                             id="rhombus-d1"> cm <input type="text" placeholder=""
                             class="px-3 bg-gray-200 rounded-md w-3/12" id="rhombus-d2"> cm</p>
@@ -81,13 +81,13 @@
                 </div>
                 <!-- ----------card 5---------- -->
                 <div class="card border-gray-200 border-4 rounded-md p-5 text-center" id="card-id-5">
-                    <img src="./images/pentagon.png" alt="" class="mx-5">
+                    <img src="./images/pentagon.png" alt="" class="mx-5 mt-7">
                     <p class="text-2xl text-center font-bold " id="pentagon-title">Pentagon</p>
                     <p>Area (A) = 0.5 x p x b</p>
                     <p class="my-2"><input type="text" placeholder="p" class="px-2 bg-gray-200 w-3/12 rounded-md"
                             id="pentagon-p"> cm <input type="text" placeholder="b"
                             class="px-3 bg-gray-200 rounded-md w-3/12" id="pentagon-b"> cm</p>
-                    <button class="py-2 mt-7 px-10 my-3 bg-cyan-600 text-white rounded-md"
+                    <button class="py-2 mt-10 px-10 my-3 bg-cyan-600 text-white rounded-md"
                         id="pentagon-calculate-btn">Calculate</button>
                 </div>
                 <!-- ------------- card 6---------- -->
@@ -112,13 +112,12 @@
             </div>
         </section>
     </main>
-    <script src="/dom.js">
 
+<!-- ----------------js link-------------- -->
 
+    <script src="/utilities.js"> </script>
+    <script src="/dom.js"></script>
 
-
-
-    </script>
 </body>
 
 </html>

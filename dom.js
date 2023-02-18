@@ -1,3 +1,115 @@
+// function 1:
+function getInputValue(id) {
+    const valueStr = document.getElementById(id).value;
+    const value = parseFloat(valueStr);
+return value;
+}
+
+// function 2:
+function displayResult(id, title, result) {
+    const parentElement = document.getElementById(id);
+    const createdElement = document.createElement('li');
+    createdElement.classList.add('mb-6');
+    createdElement.innerHTML = `
+    <div class="flex justify-between">
+        <p>${title}</p>
+        <p>${result}cm<sup>2</sup></p>
+        <button class="bg-blue-600 px-2 py-1 text-white rounded-md hover:bg-blue-400">Covert to m<sup>2</sup>
+        </button>
+    </div>
+    `
+    parentElement.appendChild(createdElement);
+}
+
+
+document.getElementById('triangle-calculate-btn').addEventListener('click', function () {
+    const cardTitle = document.getElementById('triangle-title').innerText;
+    const base = getInputValue('triangle-b');
+    const height = getInputValue('triangle-h');
+    //validation
+    if (isNaN(base) || isNaN(height) || base <= 0 || height <= 0) {
+        return alert('Please provide valid number.')
+    }
+   
+    const result = parseFloat((0.5 * base * height).toFixed(2));
+    displayResult('ordered-list', cardTitle, result)
+})
+
+
+document.getElementById('rectangle-calculate-btn').addEventListener('click', function () {
+    const cardTitle = document.getElementById('rectangle-title').innerText;
+    const width = getInputValue('rectangle-w');
+    const length = getInputValue('rectangle-l');
+    //validation
+    if (isNaN(width) || isNaN(length) || width <= 0 || length <= 0) {
+        return alert('Please provide valid number.')
+    }
+   
+    const result = parseFloat((width * length).toFixed(2));
+    displayResult('ordered-list', cardTitle, result)
+})
+
+
+document.getElementById('perallelogram-calculate-btn').addEventListener('click', function () {
+    const cardTitle = document.getElementById('perallelogram-title').innerText;
+    const base = getInputValue('perallelogram-b');
+    const height = getInputValue('perallelogram-h');
+    //validation
+    if (isNaN(base) || isNaN(height) || base <= 0 || height <= 0) {
+        return alert('Please provide valid number.')
+    }
+
+    const result = parseFloat((base * height).toFixed(2));
+    displayResult('ordered-list', cardTitle, result)
+})
+
+document.getElementById('rhombus-calculate-btn').addEventListener('click', function () {
+    const cardTitle = document.getElementById('rhombus-title').innerText;
+    const diagonal1 = getInputValue('rhombus-d1');
+    const diagonal2 = getInputValue('rhombus-d2');
+    //validation
+    if (isNaN(diagonal1) || isNaN(diagonal2) || diagonal1 <= 0 || diagonal2 <= 0) {
+        return alert('Please provide valid number.')
+    }
+    
+    const result = parseFloat((0.5 * diagonal1 * diagonal2).toFixed(2));
+    displayResult('ordered-list', cardTitle, result)
+})
+
+
+document.getElementById('pentagon-calculate-btn').addEventListener('click', function () {
+    const cardTitle = document.getElementById('pentagon-title').innerText;
+    const p = getInputValue('pentagon-p');
+    const b = getInputValue('pentagon-b');
+   //validation
+    if (isNaN(p) || isNaN(b) || p <= 0 || b <= 0) {
+        return alert('Please provide valid number.')
+    }
+    
+    const result = parseFloat((0.5 * p * b).toFixed(2));
+    displayResult('ordered-list', cardTitle, result)
+})
+
+
+document.getElementById('ellipse-calculate-btn').addEventListener('click', function () {
+    const cardTitle = document.getElementById('ellipse-title').innerText;
+    const a = getInputValue('ellipse-a');
+    const b = getInputValue('ellipse-b');
+   //validation
+    if (isNaN(a) || isNaN(b) || a <= 0 || b <= 0) {
+        return alert('Please provide valid number.')
+    }
+   
+    const result = parseFloat((Math.PI * a * b).toFixed(2));
+    displayResult('ordered-list', cardTitle, result)
+})
+
+
+
+
+
+// -------------hover area-------------
+
 document.getElementById('card-id').addEventListener('mouseenter', function () {
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
     document.getElementById('card-id').style.background = "#" + randomColor;
@@ -21,4 +133,8 @@ document.getElementById('card-id').addEventListener('mouseenter', function () {
     document.getElementById('card-id-6').addEventListener('mouseenter', function () {
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
     document.getElementById('card-id-6').style.background = "#" + randomColor;
+})
+
+document.getElementById('blog-btn').addEventListener('click', function(){
+    window.location = 'blog.html';
 })

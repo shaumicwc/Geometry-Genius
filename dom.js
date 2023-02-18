@@ -111,6 +111,9 @@ document.getElementById('card-id').addEventListener('mouseenter', function () {
     document.getElementById('card-id-6').style.background = "#" + randomColor;
 })
 
+
+// --------------blog page location-----------
+
 document.getElementById('blog-btn').addEventListener('click', function(){
     window.location = 'blog.html';
 })

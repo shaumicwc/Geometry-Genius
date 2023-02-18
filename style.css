@@ -1,6 +1,6 @@
 .calculate{
-    width: 25%;
-    height: 400px;
+    width: 45%;
+    height: 100vh;
   }
   @media (max-width: 768px) {
   .section {

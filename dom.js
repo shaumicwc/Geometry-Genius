@@ -2,6 +2,8 @@ document.getElementById('triangle-calculate-btn').addEventListener('click', func
     const cardTitle = document.getElementById('triangle-title').innerText;
     const base = getInputValue('triangle-b');
     const height = getInputValue('triangle-h');
+    clearInputField('triangle-b');
+    clearInputField('triangle-h');
     //validation
     if (isNaN(base) || isNaN(height) || base <= 0 || height <= 0) {
         return alert('Please provide valid number.')
@@ -16,6 +18,8 @@ document.getElementById('rectangle-calculate-btn').addEventListener('click', fun
     const cardTitle = document.getElementById('rectangle-title').innerText;
     const width = getInputValue('rectangle-w');
     const length = getInputValue('rectangle-l');
+    clearInputField('rectangle-w');
+    clearInputField('rectangle-l');
     //validation
     if (isNaN(width) || isNaN(length) || width <= 0 || length <= 0) {
         return alert('Please provide valid number.')
@@ -30,6 +34,8 @@ document.getElementById('perallelogram-calculate-btn').addEventListener('click',
     const cardTitle = document.getElementById('perallelogram-title').innerText;
     const base = getInputValue('perallelogram-b');
     const height = getInputValue('perallelogram-h');
+    clearInputField('perallelogram-b');
+    clearInputField('perallelogram-h');
     //validation
     if (isNaN(base) || isNaN(height) || base <= 0 || height <= 0) {
         return alert('Please provide valid number.')
@@ -43,6 +49,8 @@ document.getElementById('rhombus-calculate-btn').addEventListener('click', funct
     const cardTitle = document.getElementById('rhombus-title').innerText;
     const diagonal1 = getInputValue('rhombus-d1');
     const diagonal2 = getInputValue('rhombus-d2');
+    clearInputField('rhombus-d1');
+    clearInputField('rhombus-d2');
     //validation
     if (isNaN(diagonal1) || isNaN(diagonal2) || diagonal1 <= 0 || diagonal2 <= 0) {
         return alert('Please provide valid number.')
@@ -57,6 +65,8 @@ document.getElementById('pentagon-calculate-btn').addEventListener('click', func
     const cardTitle = document.getElementById('pentagon-title').innerText;
     const p = getInputValue('pentagon-p');
     const b = getInputValue('pentagon-b');
+    clearInputField('pentagon-p');
+    clearInputField('pentagon-b');
    //validation
     if (isNaN(p) || isNaN(b) || p <= 0 || b <= 0) {
         return alert('Please provide valid number.')
@@ -71,6 +81,8 @@ document.getElementById('ellipse-calculate-btn').addEventListener('click', funct
     const cardTitle = document.getElementById('ellipse-title').innerText;
     const a = getInputValue('ellipse-a');
     const b = getInputValue('ellipse-b');
+    clearInputField('ellipse-a');
+    clearInputField('ellipse-b');
    //validation
     if (isNaN(a) || isNaN(b) || a <= 0 || b <= 0) {
         return alert('Please provide valid number.')

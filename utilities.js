@@ -1,11 +1,11 @@
-// function 1:
+// common function 1:
 function getInputValue(id) {
     const valueStr = document.getElementById(id).value;
     const value = parseFloat(valueStr);
 return value;
 }
 
-// function 2:
+//common function 2:
 function displayResult(id, title, result) {
     const parentElement = document.getElementById(id);
     const createdElement = document.createElement('li');
@@ -19,4 +19,10 @@ function displayResult(id, title, result) {
     </div>
     `
     parentElement.appendChild(createdElement);
+}
+
+//common function 3
+function clearInputField(id) {
+    const inputField = document.getElementById(id);
+    inputField.value = '';
 }
